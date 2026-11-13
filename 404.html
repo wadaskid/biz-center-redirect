@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting to Business Bosses...</title>
+  <meta http-equiv="refresh" content="0; url=https://businessbosses.co.uk/">
+  <script>
+    (function () {
+      var targetBase = 'https://businessbosses.co.uk';
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      var dest = targetBase + (path === '/' ? '' : path) + search + hash;
+      window.location.replace(dest);
+    })();
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 480px;
+      text-align: center;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid #334155;
+      border-top-color: #38bdf8;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 24px auto;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+    p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s ease;
+    }
+    .btn:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="spinner"></div>
+    <h1>Redirecting to Business Bosses</h1>
+    <p>Forwarding to <strong>businessbosses.co.uk</strong>...</p>
+    <a id="redirect-link" class="btn" href="https://businessbosses.co.uk/">Click here if not redirected</a>
+  </div>
+
+  <script>
+    (function () {
+      var targetBase = 'https://businessbosses.co.uk';
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      var dest = targetBase + (path === '/' ? '' : path) + search + hash;
+      var link = document.getElementById('redirect-link');
+      if (link) {
+        link.href = dest;
+      }
+    })();
+  </script>
+</body>
+</html>
